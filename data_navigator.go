@@ -211,7 +211,7 @@ func (m sortMap) Len() int {
 }
 
 func (m sortMap) Less(i, j int) bool {
-	return m.ms[i].Key.(string) < m.ms[j].Key.(string)
+	return fmt.Sprintf("%s", m.ms[i].Key) < fmt.Sprintf("%s", m.ms[j].Key)
 }
 
 func (m sortMap) Swap(i, j int) {
